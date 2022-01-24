@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CubeShaderGraphMat
+  m_Shader: {fileID: -6465566751694194690, guid: 471ac2246a55253c38476535185ccb41, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_0d27b45b0bd44f75bfa7cec40bf974c1_Texture_1:
+        m_Texture: {fileID: 2800000, guid: bdb6be1789e18fe25820b6022db304c8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_3762ef9f783b40a98264c5e4aee15365_Texture_1:
+        m_Texture: {fileID: 2800000, guid: dd9ab373ac2613120a42c489225f2522, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_3b295a929f4b4cb7b1c1698b5f380875_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 890dbdcae6a4048c990e63028b1b1200, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_a5f7c31fe1044f439ae6210e6881c33c_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4f5cdc8c519c042699880db94658e9e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_e4c73b6e64354837ac8b703c8a99bd3d_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 25098c2e63677054f9a7860a6212b915, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BackEmission: 0
+    - _LeftEmission: 0
+    - _TopEmission: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
