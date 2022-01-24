@@ -6,7 +6,7 @@ You can switch the emission during runtime with B, T and L keys respectively.
 ## Material setup
 In the Shaders directory you can find the CubeShaderGraph, that is used to calculate the emission of the cube.
 In the Materials directory you can find the CubeShaderGraphMat, which is a material for the CubeShaderGraph.
-The material override asset: CubeShaderGraphMatOverride can be found in the Materials dorectory too. The generated material override script are in the Scripts/MaterialOverrides directory. These the components that are going to be added to those entities that has the CubeShaderGraphMatOverride on them.
+The material override asset: CubeShaderGraphMatOverride can be found in the Materials directory too. The generated material override script are in the Scripts/MaterialOverrides directory. These the components that are going to be added to those entities that has the CubeShaderGraphMatOverride on them.
 (The textures can be found in the Textures directory.)
 
 ## The data components
