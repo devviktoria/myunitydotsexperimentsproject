@@ -2,6 +2,7 @@
 The EmmissionMaskingScene contains 3 cubes that has an emissive material assigned. 
 That material has overrides turning on the emission on the back, top and left side of the cube.
 You can switch the emission during runtime with B, T and L keys respectively.
+This experiment is using the URP 10.8.1, Shader Graph 10.8.1, Entities 0.17, Hybrid Renderer (0.11) V2 and the old Input Manager.
 
 ## Material setup
 In the Shaders directory you can find the CubeShaderGraph, that is used to calculate the emission of the cube.
