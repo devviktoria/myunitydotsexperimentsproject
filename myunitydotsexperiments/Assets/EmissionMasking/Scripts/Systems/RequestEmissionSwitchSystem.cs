@@ -1,6 +1,6 @@
 using Unity.Entities;
 
-public class RequestEmissionSwitchSystem : SystemBase
+public partial class RequestEmissionSwitchSystem : SystemBase
 {
     protected override void OnUpdate()
     {

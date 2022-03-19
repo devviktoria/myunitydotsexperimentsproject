@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using Unity.Transforms;
 
 [UpdateInGroup(typeof(SimulationSystemGroup))]
-public class UpdateSystem01 : SystemBase
+public partial class UpdateSystem01 : SystemBase
 {
     protected override void OnCreate()
     {
@@ -21,7 +21,7 @@ public class UpdateSystem01 : SystemBase
 }
 
 [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
-public class UpdateSystem02 : SystemBase
+public partial class UpdateSystem02 : SystemBase
 {
     protected override void OnCreate()
     {
@@ -36,7 +36,7 @@ public class UpdateSystem02 : SystemBase
 }
 
 [UpdateInGroup(typeof(TransformSystemGroup))]
-public class UpdateSystem03 : SystemBase
+public partial class UpdateSystem03 : SystemBase
 {
     protected override void OnCreate()
     {
@@ -51,7 +51,7 @@ public class UpdateSystem03 : SystemBase
 }
 
 [UpdateInGroup(typeof(LateSimulationSystemGroup))]
-public class UpdateSystem04 : SystemBase
+public partial class UpdateSystem04 : SystemBase
 {
     protected override void OnCreate()
     {

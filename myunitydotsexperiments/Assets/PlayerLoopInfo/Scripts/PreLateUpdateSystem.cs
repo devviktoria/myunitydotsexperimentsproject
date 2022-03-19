@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using Unity.Transforms;
 
 [UpdateInGroup(typeof(PresentationSystemGroup))]
-public class PreLateUpdateSystem : SystemBase
+public partial class PreLateUpdateSystem : SystemBase
 {
     protected override void OnCreate()
     {

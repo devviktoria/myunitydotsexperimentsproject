@@ -2,7 +2,7 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Rendering;
 
-public class EmissionSwitchSystem : SystemBase
+public partial class EmissionSwitchSystem : SystemBase
 {
     private EntityQuery m_MouseGroup;
 

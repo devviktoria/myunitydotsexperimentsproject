@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using Unity.Transforms;
 
 [UpdateInGroup(typeof(InitializationSystemGroup))]
-public class InitSystem : SystemBase
+public partial class InitSystem : SystemBase
 {
     protected override void OnCreate()
     {
