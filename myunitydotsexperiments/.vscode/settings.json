@@ -1,4 +1,4 @@
-﻿{
+{
     "files.exclude":
     {
         "**/.DS_Store":true,
@@ -52,5 +52,10 @@
         "ProjectSettings/":true,
         "temp/":true,
         "Temp/":true
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0F341E",
+        "titleBar.activeBackground": "#14492B",
+        "titleBar.activeForeground": "#F3FCF7"
     }
 }
