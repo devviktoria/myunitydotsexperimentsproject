@@ -98,37 +98,4 @@ public class DOTSQueryDisplayer : MonoBehaviour
             }
         }
     }
-
-    private unsafe void DrawLeafCollider(RigidBody body, ColliderKey key)
-    {
-        if (body.Collider.Value.GetLeaf(key, out ChildCollider leaf) && (leaf.Collider == null))
-        {
-            RigidTransform worldFromLeaf = math.mul(body.WorldFromBody, leaf.TransformFromChild);
-            if (leaf.Collider->Type == ColliderType.Triangle || leaf.Collider->Type == ColliderType.Quad)
-            {
-                PolygonCollider* polygon = (PolygonCollider*)leaf.Collider;
-                float3 v0 = math.transform(worldFromLeaf, polygon->Vertices[0]);
-                float3 v1 = math.transform(worldFromLeaf, polygon->Vertices[1]);
-                float3 v2 = math.transform(worldFromLeaf, polygon->Vertices[2]);
-                float3 v3 = float3.zero;
-                if (polygon->IsQuad)
-                {
-                    v3 = math.transform(worldFromLeaf, polygon->Vertices[3]);
-                }
-
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawLine(v0, v1);
-                Gizmos.DrawLine(v1, v2);
-                if (polygon->IsTriangle)
-                {
-                    Gizmos.DrawLine(v2, v0);
-                }
-                else
-                {
-                    Gizmos.DrawLine(v2, v3);
-                    Gizmos.DrawLine(v3, v0);
-                }
-            }
-        }
-    }
 }
