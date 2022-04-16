@@ -102,7 +102,7 @@ public partial class CalculateDistanceQueryTesterSystem : SystemBase
         Entities
             .WithoutBurst()
             .WithName("CalculateDistanceHit")
-            .ForEach((Entity entity, ref PhysicsVelocity physicsVelocity,
+            .ForEach((Entity entity,
                 ref DOTSQueryDisplayerData dOTSQueryDisplayerData,
                 in PhysicsCollider collider,
                 in Translation translation,
