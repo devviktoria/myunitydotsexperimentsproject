@@ -2,10 +2,8 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
-using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Physics.Systems;
-using Unity.Transforms;
 
 [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
 [UpdateAfter(typeof(EndFramePhysicsSystem))]
@@ -26,7 +24,7 @@ public partial class TriggerActivateRequestSystem : SystemBase
         });
     }
 
-    //[BurstCompile]
+    [BurstCompile]
     struct TriggerActivateRequestJob : ITriggerEventsJob
     {
         [ReadOnly] public ComponentDataFromEntity<PlayerTag> playerTagGroup;

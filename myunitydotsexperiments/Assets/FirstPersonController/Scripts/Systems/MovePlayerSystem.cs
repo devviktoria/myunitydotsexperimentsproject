@@ -26,8 +26,6 @@ public partial class MovePlayerSystem : SystemBase
         PhysicsWorld physicsWorld = _BuildPhysicsWorldSystem.PhysicsWorld;
         float deltaTime = Time.fixedDeltaTime;
 
-        //UnityEngine.Debug.Log($"float2InputData.moveActionData: {float2InputData.moveActionData}");
-
         Dependency = Entities
             .WithoutBurst()
             .WithName("MovePlayer")
@@ -50,11 +48,10 @@ public partial class MovePlayerSystem : SystemBase
                 }
 
                 float3 linearVelocity = requestedMovementDirection * characterControllerData.movementSpeed;
+
                 float3 distance = linearVelocity * deltaTime;
                 float3 newPosition = translation.Value + distance;
 
-                //UnityEngine.Debug.Log($"translation.Value: {translation.Value}; physicsMass.Transform: {physicsMass.Transform.pos}");
-                //UnityEngine.Debug.Log($"horizontalAngularVelocity {horizontalAngularVelocity}");
                 RigidTransform rigidTransform = new RigidTransform { pos = newPosition, rot = rotation.Value };
 
                 ColliderDistanceInput colliderDistanceInput = new ColliderDistanceInput
@@ -68,8 +65,6 @@ public partial class MovePlayerSystem : SystemBase
                 OtherNonTriggerClosestHitCollector<DistanceHit> otherNonTriggerClosestHitCollector =
                         new OtherNonTriggerClosestHitCollector<DistanceHit>(rigidBodyIndex, 10.0f);
                 physicsWorld.CalculateDistance(colliderDistanceInput, ref otherNonTriggerClosestHitCollector);
-                //DistanceHit closestHit = otherNonTriggerClosestHitCollector.closestHit;
-                //UnityEngine.Debug.Log($"Distance {closestHit.Fraction} {closestHit.Entity}");
                 if (otherNonTriggerClosestHitCollector.NumHits > 0 &&
                     otherNonTriggerClosestHitCollector.closestHit.Distance > 0 &&
                     otherNonTriggerClosestHitCollector.closestHit.Distance < characterControllerData.skinWidth)
